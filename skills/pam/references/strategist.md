@@ -178,6 +178,21 @@ Before formulating the Six Confirmations, the Strategist MUST read:
 1. `assets/palettes/palettes_index.json` — available palettes
 2. `assets/sizes/sizes_index.json` — standard size presets
 3. `assets/sprites/sprites_index.json` — sprite layout templates
-4. `image_analysis.csv` (if user provided images) — extracted palette and size info
+4. The matching [Asset Category Guide](../SKILL.md#asset-category-guides) for the dominant asset type
+5. `image_analysis.csv` (if user provided images) — extracted palette and size info
 
 Failure to read these files before confirmation is a workflow violation.
+
+## 8. Per-Category Confirmation Notes
+
+When an asset category dominates the project, append these constraints to the Six Confirmations:
+
+| Category | Extra Confirmation |
+|----------|-------------------|
+| Characters | Read [category-characters.md](category-characters.md); confirm idle/walk/attack frame counts |
+| Animals | Read [category-animals.md](category-animals.md); confirm side/3/4 view and gait cycle |
+| Plants | Read [category-plants.md](category-plants.md); confirm wind amplitude and branch visibility |
+| Creatures / Monsters | Read [category-creatures.md](category-creatures.md); confirm signature feature and threat pose |
+| Items / Props | Read [category-items.md](category-items.md); confirm perspective and material |
+| Tiles | Read [category-tiles.md](category-tiles.md); confirm seamless tiling and autotile format |
+

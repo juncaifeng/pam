@@ -54,6 +54,8 @@ def main(argv: list[str] | None = None) -> int:
     # ── validate-assets ────────────────────────────────────────────────────
     p_validate_assets = sub.add_parser("validate-assets", help="Validate pixel art assets against spec_lock")
     p_validate_assets.add_argument("project_path", help="Project directory path")
+    p_validate_assets.add_argument("--strict", action="store_true", default=True, help="Treat anti-aliasing/semi-transparent pixels as errors (default)")
+    p_validate_assets.add_argument("--no-strict", action="store_true", help="Treat anti-aliasing/semi-transparent pixels as warnings")
 
     # ── palette ────────────────────────────────────────────────────────────
     p_palette = sub.add_parser("palette", help="Palette extraction and validation")
@@ -120,7 +122,8 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if ok else 1
 
     if args.command == "validate-assets":
-        ok = cmd_validate_assets(args.project_path)
+        strict = args.strict and not args.no_strict
+        ok = cmd_validate_assets(args.project_path, strict=strict)
         return 0 if ok else 1
 
     if args.command == "palette":

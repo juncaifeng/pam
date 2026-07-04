@@ -14,6 +14,21 @@ A pixel art asset generator executor. Converts design specifications into pixel 
 
 Before the first asset, output a confirmation listing: canvas size, palette (all HEX values), art style, target platform, animation specs. Prevents spec/execution drift.
 
+### 1.2 Category Guide (Mandatory)
+
+For every asset, read the matching category guide from [Asset Category Guides](../SKILL.md#asset-category-guides) **before** generation:
+
+| Asset Category | Required Reading |
+|----------------|------------------|
+| Character / humanoid | [category-characters.md](category-characters.md) |
+| Animal | [category-animals.md](category-animals.md) |
+| Plant / tree | [category-plants.md](category-plants.md) |
+| Monster / creature | [category-creatures.md](category-creatures.md) |
+| Item / prop / icon | [category-items.md](category-items.md) |
+| Terrain tile | [category-tiles.md](category-tiles.md) |
+
+Failure to read the relevant category guide is a workflow violation.
+
 ### 1.1 Per-asset spec_lock re-read (Mandatory)
 
 > `spec_lock.md` is the canonical execution reference — re-read it per asset to bypass model memory.

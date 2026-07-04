@@ -70,6 +70,19 @@ For complete command documentation, see [scripts/README.md](scripts/README.md).
 | Size presets | `assets/sizes/sizes_index.json` | Query standard pixel art dimensions |
 | Sprite templates | `assets/sprites/sprites_index.json` | Query sprite layout templates (character, tile, item, UI) |
 
+## Asset Category Guides
+
+Before generating an asset, the Executor MUST read the matching category guide:
+
+| Category | Reference |
+|----------|-----------|
+| Characters / NPCs / humanoids | [references/category-characters.md](references/category-characters.md) |
+| Animals / creatures | [references/category-animals.md](references/category-animals.md) |
+| Plants / trees / vegetation | [references/category-plants.md](references/category-plants.md) |
+| Monsters / fantasy creatures | [references/category-creatures.md](references/category-creatures.md) |
+| Items / props / UI icons | [references/category-items.md](references/category-items.md) |
+| Terrain tiles / seamless tiles | [references/category-tiles.md](references/category-tiles.md) |
+
 ## Standalone Workflows
 
 | Workflow | Path | Purpose |
@@ -225,6 +238,7 @@ After confirmation, generate:
 
 **Per-asset generation**:
 - Re-read `spec_lock.md` before each asset
+- Read the matching [Asset Category Guide](#asset-category-guides) before generating
 - Generate at declared canvas size
 - Apply declared palette (quantize if needed)
 - Save to appropriate `assets/` subdirectory
