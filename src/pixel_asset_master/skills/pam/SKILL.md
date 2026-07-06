@@ -9,7 +9,7 @@ description: >
 compatibility: Requires the `pam` CLI installed via `uv tool install .` from the repository root. Python 3.8+ and uv required.
 license: MIT
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   author: juncaifeng
 ---
 
